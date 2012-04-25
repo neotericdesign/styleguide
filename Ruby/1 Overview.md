@@ -126,8 +126,10 @@ else
 end
 ```
 
-*The and and or keywords are banned. It's just not worth it. Always use && and || instead.*
+**The and and or keywords are banned. It's just not worth it. Always use && and || instead.** 
+
 Avoid multi-line ?: (the ternary operator), use if/unless instead.
+
 Favor modifier if/unless usage when you have a single-line body.
 
 ```ruby
@@ -140,7 +142,7 @@ end
 do_something if some_condition
 ```
 
-*Never use unless with else.* Rewrite these with the positive case first.
+**Never use unless with else.** Rewrite these with the positive case first.
 
 ```ruby
 # bad
@@ -250,7 +252,7 @@ Use ||= freely to initialize variables.
 name ||= 'Bozhidar'
 ```
 
-*Don't use ||= to initialize boolean variables.* (Consider what would happen if the current value happened to be `false`.)
+**Don't use ||= to initialize boolean variables.** (Consider what would happen if the current value happened to be `false`.)
 
 ```ruby
 # bad - would set enabled to true even if it was false
