@@ -62,7 +62,7 @@ end
 
 ## Syntax
 
-Use def with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments.
+Use `def` with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments.
 
 ```ruby
  def some_method
@@ -74,7 +74,7 @@ Use def with parentheses when there are arguments. Omit the parentheses when the
  end
 ```
 
-Never use for, unless you know exactly why. Most of the time iterators should be used instead. for is implemented in terms of each (so you're adding a level of indirection), but with a twist - for doesn't introduce a new scope (unlike each) and variables defined in its block will be visible outside it.
+Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. for is implemented in terms of `each` (so you're adding a level of indirection), but with a twist - `for` doesn't introduce a new scope (unlike `each`) and variables defined in its block will be visible outside it.
 
 ```ruby
 arr = [1, 2, 3]
@@ -102,7 +102,7 @@ if some_condition
 end
 ```
 
-Avoid the ternary operator (?:) except in cases where all expressions are extremely trivial. However, do use the ternary operator(?:) over if/then/else/end constructs for single line conditionals.
+Avoid the ternary operator (`?:`) except in cases where all expressions are extremely trivial. However, do use the ternary operator(`?:`) over `if/then/else/end` constructs for single line conditionals.
 
 ```ruby
 # bad
@@ -126,11 +126,11 @@ else
 end
 ```
 
-**The and and or keywords are banned. It's just not worth it. Always use && and || instead.** 
+**The `and` and `or` keywords are banned. It's just not worth it. Always use `&&` and `||` instead.** 
 
-Avoid multi-line ?: (the ternary operator), use if/unless instead.
+Avoid multi-line `?:` (the ternary operator), use `if/unless` instead.
 
-Favor modifier if/unless usage when you have a single-line body.
+Favor modifier `if/unless` usage when you have a single-line body.
 
 ```ruby
 # bad
@@ -160,7 +160,7 @@ else
 end
 ```
 
-Don't use parentheses around the condition of an if/unless/while, unless the condition contains an assignment (see "Using the return value of =" below).
+Don't use parentheses around the condition of an `if/unless/while`, unless the condition contains an assignment (see "Using the return value of =" below).
 
 ```ruby
 # bad
@@ -217,7 +217,7 @@ def some_method(some_arr)
 end
 ```
 
-Use spaces around the = operator when assigning default values to method parameters:
+Use spaces around the `=` operator when assigning default values to method parameters:
 
 ```ruby
 # bad
@@ -232,6 +232,7 @@ end
 ```
 
 While several Ruby books suggest the first style, the second is much more prominent in practice (and arguably a bit more readable).
+
 Using the return value of `=` (an assignment) is ok, but surround the assignment with parenthesis.
 
 ```ruby
@@ -252,7 +253,7 @@ Use ||= freely to initialize variables.
 name ||= 'Bozhidar'
 ```
 
-**Don't use ||= to initialize boolean variables.** (Consider what would happen if the current value happened to be `false`.)
+**Don't use `||=` to initialize boolean variables.** (Consider what would happen if the current value happened to be `false`.)
 
 ```ruby
 # bad - would set enabled to true even if it was false
