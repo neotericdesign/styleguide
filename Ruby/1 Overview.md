@@ -3,7 +3,7 @@
 * Use soft-tabs with a two space indent.
 * Keep lines fewer than 80 characters.
 * Never leave trailing whitespace.
-** Textmate users can install the [whitespace bundle](https://github.com/vigetlabs/whitespace-tmbundle)
+  * Textmate users can install the [whitespace bundle](https://github.com/vigetlabs/whitespace-tmbundle)
 * Use spaces around operators, after commas, colons and semicolons, around `{` and before `}`.
 
 ```ruby
