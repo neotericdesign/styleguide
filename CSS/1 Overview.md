@@ -46,14 +46,16 @@ In general, file organization goes like this:
 
 Use SASS to include files instead of Sprokets. Example:
 
-    # application.css.scss
-    @import 'refinery/site_bar';
-    @import 'partials/base';
-    @import 'formatting';
-    @import 'partials/forms';
-    @import 'partials/buttons';
-    @import 'layout';
-    @import 'search';
+```scss
+# application.css.scss
+@import 'refinery/site_bar';
+@import 'partials/base';
+@import 'formatting';
+@import 'partials/forms';
+@import 'partials/buttons';
+@import 'layout';
+@import 'search';
+```
 
 ## Pixels vs. Ems ##
 
@@ -68,20 +70,24 @@ Elements that occur **exactly once** inside a page should use IDs, otherwise, us
 
 Here's an example:
 
-    <ul class="category-list">
-      <li class="item">Category 1</li>
-      <li class="item">Category 2</li>
-      <li class="item">Category 3</li>
-    </ul>
+```html
+<ul class="category-list">
+  <li class="item">Category 1</li>
+  <li class="item">Category 2</li>
+  <li class="item">Category 3</li>
+</ul>
+```
 
-    .category-list {
-      &> li {
-        list-style-type: disc;
-      }
-      a {
-        color: #ff0000;
-      }
-    }
+```scss
+.category-list {
+  &> li {
+    list-style-type: disc;
+  }
+  a {
+    color: #ff0000;
+  }
+}
+```
 
 ### CSS Specificity guidelines
 
