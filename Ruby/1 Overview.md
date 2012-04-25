@@ -52,7 +52,7 @@ def some_method
   something_else = initialize(other_things)
   
   data.manipulate!
-  data << something_else
+  data << something_else # in the real world, you refactored maniuplate! to do this
   
   data.result
 end
@@ -61,6 +61,12 @@ def some_method
   result
 end
 ```
+
+Uncle Bob says, Methods should do one thing, and they should do it well. **Refactor until you drop**
+
+Restrict your methods to 4 lines (not including blanks) if it is at all possible. 
+
+**Remember:** if the method can be refactored, then it isn't doing just one thing.
 
 ## Syntax
 
