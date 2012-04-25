@@ -10,7 +10,7 @@
 
 Here's a good example:
 
-```
+```css
 .styleguide-format {
   border: 1px solid #0f0;
   color: #000;
