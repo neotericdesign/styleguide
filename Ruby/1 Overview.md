@@ -49,8 +49,10 @@ Use empty lines between defs and to break up a method into logical paragraphs.
 ```ruby
 def some_method
   data = initialize(options)
+  something_else = initialize(other_things)
   
   data.manipulate!
+  data << something_else
   
   data.result
 end
